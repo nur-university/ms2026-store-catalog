@@ -1,4 +1,4 @@
-﻿using Joseco.Communication.External.Contracts.Services;
+using Joseco.Communication.External.Contracts.Services;
 using Joseco.Outbox.Contracts.Model;
 using MediatR;
 
@@ -14,7 +14,10 @@ class PublishProductCreated(IExternalPublisher integrationBusService) : INotific
             notification.Content.Description,
             notification.CorrelationId,
             "catalog"
-        );
+        )
+        {
+            Id = notification.Content.Id
+        };
 
         await integrationBusService.PublishAsync(message);
     }
