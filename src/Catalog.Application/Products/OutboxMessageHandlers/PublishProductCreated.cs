@@ -13,7 +13,8 @@ class PublishProductCreated(IExternalPublisher integrationBusService) : INotific
             notification.Content.Name,
             notification.Content.Description,
             notification.CorrelationId,
-            "catalog"
+            "catalog",
+            notification.Content.Price
         )
         {
             Id = notification.Content.Id

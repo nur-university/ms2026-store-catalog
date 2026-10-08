@@ -1,4 +1,4 @@
-﻿using Catalog.Domain.Products.Events;
+using Catalog.Domain.Products.Events;
 using Joseco.DDD.Core.Abstractions;
 
 namespace Catalog.Domain.Products;
@@ -18,7 +18,7 @@ public class Product : AggregateRoot
         Descripcion = descripcion;
         CategoryId = categoryId;
 
-        AddDomainEvent(new ProductCreated(Id, name, descripcion, categoryId));
+        AddDomainEvent(new ProductCreated(Id, name, descripcion, categoryId, price));
     }
 
     public void Update(string name, string description, decimal price, Guid categoryId)
