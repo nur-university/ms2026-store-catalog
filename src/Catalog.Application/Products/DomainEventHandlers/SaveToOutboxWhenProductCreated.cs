@@ -1,4 +1,4 @@
-﻿using Catalog.Application.Abstractions;
+using Catalog.Application.Abstractions;
 using Catalog.Domain.Products.Events;
 using Joseco.DDD.Core.Abstractions;
 using Joseco.Outbox.Contracts.Model;
@@ -7,8 +7,7 @@ using MediatR;
 
 namespace Catalog.Application.Products.DomainEventHandlers;
 
-internal class SaveToOutboxWhenProductCreated(IOutboxService<DomainEvent> outboxService, 
-    IUnitOfWork unitOfWork) : INotificationHandler<ProductCreated>
+internal class SaveToOutboxWhenProductCreated(IOutboxService<DomainEvent> outboxService) : INotificationHandler<ProductCreated>
 {
     public async Task Handle(ProductCreated domainEvent, CancellationToken cancellationToken)
     {
@@ -16,7 +15,6 @@ internal class SaveToOutboxWhenProductCreated(IOutboxService<DomainEvent> outbox
         OutboxMessage<DomainEvent> outboxMessage = new(domainEvent);
 
         await outboxService.AddAsync(outboxMessage);     
-        await unitOfWork.CommitAsync(cancellationToken);
 
     }
 }
