@@ -36,12 +36,12 @@
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\..\Utils\Joseco.Secrets\src\Joseco.Secrets.HashicorpVault\Joseco.Secrets.HashicorpVault.csproj" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\..\Utils\Joseco.Secrets\src\Joseco.Secrets.HashicorpVault\Joseco.Secrets.HashicorpVault.csproj')" />
     <PackageReference Include="Npgsql.OpenTelemetry" Version="9.0.3" />
 
-    <PackageReference Include="Nur.Store2025.Access.Catalog" Version="1.0.0" Condition="!Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Access\src\Nur.Store2026.Access.Catalog\Nur.Store2026.Access.Catalog.csproj')" />
+    <PackageReference Include="Nur.Store2026.Access.Catalog" Version="1.0.0" Condition="!Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Access\src\Nur.Store2026.Access.Catalog\Nur.Store2026.Access.Catalog.csproj')" />
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Access\src\Nur.Store2026.Access.Catalog\Nur.Store2026.Access.Catalog.csproj" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Access\src\Nur.Store2026.Access.Catalog\Nur.Store2026.Access.Catalog.csproj')" />
 
-    <PackageReference Include="Nur.Store2025.Observability" Version="1.0.0" Condition="!Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Observability\src\Nur.Store2026.Observability\Nur.Store2026.Observability.csproj')" />
+    <PackageReference Include="Nur.Store2026.Observability" Version="1.0.0" Condition="!Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Observability\src\Nur.Store2026.Observability\Nur.Store2026.Observability.csproj')" />
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Observability\src\Nur.Store2026.Observability\Nur.Store2026.Observability.csproj" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Observability\src\Nur.Store2026.Observability\Nur.Store2026.Observability.csproj')" />
-    <PackageReference Include="Nur.Store2025.Security" Version="1.0.0" Condition="!Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Security\src\Nur.Store2026.Security\Nur.Store2026.Security.csproj')" />
+    <PackageReference Include="Nur.Store2026.Security" Version="1.0.0" Condition="!Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Security\src\Nur.Store2026.Security\Nur.Store2026.Security.csproj')" />
     <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Security\src\Nur.Store2026.Security\Nur.Store2026.Security.csproj" Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\..\SharedKernel\Nur.Store2026.Security\src\Nur.Store2026.Security\Nur.Store2026.Security.csproj')" />
     
     <PackageReference Include="Scrutor" Version="6.0.1" />
